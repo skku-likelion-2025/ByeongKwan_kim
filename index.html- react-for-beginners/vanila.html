@@ -1,35 +1,17 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
     <body>
-        <div id = "root"></div>
+    <span>Total clicks : 0</span>
+    <button id = "btn">Click me</button>
     </body>
-    <script src = "https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
-    <script src = "https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
-    <script src = "https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script type="text/babel">
-    const root = document .getElementById("root");
-
-    function Title() {
-        return (
-        <h3 id = "title" onMouseEnter = {() => console.log('mouse enter')}>
-            Hello I'm a title
-        </h3> );
-    }   
-
-    function Button() {
-        return ( 
-        <button onClick = {() => console.log('im clicked')} style = {{ backgroundColor: "tomato"}}>
-            Click me!
-        </button>
-    );
+   <script>
+    let counter = 0;    
+    const button = document.getElementById("btn");
+    const span = document.querySelector("span");    
+    function handleClick() {
+    counter = counter + 1;
+    span.innerText = `Total clicks : ${counter}`;
     }
-    const Container = (
-    <div>
-        <Title/>
-        <Button/>
-    </div>
-    );
-    const rootElement = ReactDOM.createRoot(root);
-    rootElement.render(Container);    
+    button.addEventListener("click", handleClick);
     </script>
-   </html>
+</html>

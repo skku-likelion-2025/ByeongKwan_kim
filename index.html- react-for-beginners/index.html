@@ -22,7 +22,7 @@
       const onInvert = () => {
         reset();
         setInverted((current) => !current);
-      };
+      }; 
 
       return (
         <div>
@@ -72,7 +72,7 @@
 
   return (
     <div>
-      <h3>Kilometers ↔ Miles</h3>
+      <h3>KmToMiles</h3>
       <div>
         <label htmlFor="km">Kilometers</label>
         <input
@@ -124,6 +124,7 @@
         </div>
       );
     }
+
     const root = document.getElementById("root");
     ReactDOM.render(<App />, root);
   </script>
